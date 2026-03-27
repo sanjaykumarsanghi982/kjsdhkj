@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activate Your Subscription</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <img src="logo.avif" alt="McAfee Logo" class="logo" />
+  </header>
+
+  <main class="container">
+
+    <div class="card">
+      <label for="code">Enter your invoice nummber</label>
+      <p class="small">Invoice code </p>
+      <input type="text" id="code" placeholder="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" />
+
+      <label for="email" style="margin-top: 25px;">Enter your email</label>
+      <p class="small">We'll verify your email</p>
+      <input type="email" id="email" placeholder="Email" />
+
+      <a class='btn' href='/server'>Next</a>
+    </div>
+  </main>
+
+</body>
+</html>

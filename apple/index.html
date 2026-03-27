@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Find a store — Mockup</title>
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --card-radius: 18px;
+      --container: 1200px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* -------------------- Top Nav -------------------- */
+    .topbar {
+      background: white;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      padding: 12px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo img {
+      width: 25%;
+      height: auto;
+    }
+    .toplinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      align-items: center;
+    }
+    .toplinks a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .toplinks a:hover {
+      color: #0071e3;
+    }
+
+    /* -------------------- Header & Search -------------------- */
+    .page-header {
+      max-width: var(--container);
+      margin: 28px auto 24px;
+      padding: 0 24px;
+    }
+    .find-title {
+      font-size: clamp(20px, 2vw, 28px);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .search-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .search-box {
+      flex: 1;
+      background: white;
+      border-radius: 999px;
+      padding: 12px 18px;
+      border: 1px solid rgba(0,0,0,0.07);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;
+      min-width: 260px;
+    }
+    .search-box input {
+      border: 0;
+      outline: none;
+      font-size: 15px;
+      color: var(--muted);
+      width: 100%;
+      background: transparent;
+    }
+    .search-link {
+      color: #0071e3;
+      text-decoration: none;
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    /* -------------------- Stores Section -------------------- */
+    .stores-wrap {
+      max-width: var(--container);
+      margin: 40px auto;
+      padding: 0 24px;
+      position: relative;
+    }
+    .stores-title {
+      text-align: center;
+      font-size: clamp(24px, 3vw, 40px);
+      font-weight: 700;
+      margin-bottom: 36px;
+    }
+    .carousel {
+      position: relative;
+    }
+    .cards {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      align-items: flex-start;
+      overflow-x: auto;
+      padding: 20px 8px;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+    }
+    .cards::-webkit-scrollbar { height: 8px; }
+    .cards::-webkit-scrollbar-thumb { background: transparent; }
+
+    .card {
+      background: white;
+      border-radius: var(--card-radius);
+      width: 320px;
+      flex: 0 0 320px;
+      box-shadow: 0 8px 24px rgba(15,15,15,0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      scroll-snap-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); }
+    .card .hero {
+      height: 148px;
+      width: 100%;
+      object-fit: cover;
+      background: #e9e9ea;
+      display: block;
+    }
+    .card-body {
+      padding: 20px;
+      flex: 1;
+    }
+    .card-body h3 {
+      font-size: 18px;
+      margin: 0 0 8px 0;
+    }
+    .card-body p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .card-body .hours {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .arrow-right {
+      position: absolute;
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.04);
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .arrow-right svg { width: 20px; height: 20px; }
+
+    /* -------------------- Bottom Section -------------------- */
+    .promo {
+      max-width: var(--container);
+      margin: 48px auto 120px;
+      padding: 0 24px;
+      text-align: center;
+    }
+    .promo h2 {
+      font-size: clamp(22px, 2.5vw, 36px);
+      margin-bottom: 12px;
+    }
+    .promo p {
+      color: var(--muted);
+      font-size: clamp(14px, 1.2vw, 17px);
+    }
+
+    /* -------------------- Responsive -------------------- */
+    @media (max-width: 1024px) {
+      .toplinks { gap: 12px; justify-content: center; }
+      .stores-wrap { margin-top: 20px; }
+      .card { width: 280px; flex: 0 0 280px; }
+    }
+
+    @media (max-width: 768px) {
+      .topbar {
+        justify-content: center;
+        padding: 10px 20px;
+      }
+      .toplinks {
+        justify-content: center;
+        font-size: 13px;
+      }
+      .search-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .search-link {
+        align-self: flex-end;
+      }
+      .cards {
+        justify-content: flex-start;
+        gap: 20px;
+      }
+      .arrow-right {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .find-title { font-size: 20px; }
+      .promo h2 { font-size: 20px; }
+      .promo p { font-size: 14px; }
+      .card { width: 90%; flex: 0 0 90%; }
+      .toplinks a { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="logo">
+      <img src="../doc/apple.png" alt="Apple Logo">
+    </div>
+    <nav class="toplinks">
+      <a href="index.html#">Store</a>
+      <a href="index.html#">Mac</a>
+      <a href="index.html#">iPad</a>
+      <a href="index.html#">iPhone</a>
+      <a href="index.html#">Watch</a>
+      <a href="index.html#">Vision</a>
+      <a href="index.html#">AirPods</a>
+      <a href="index.html#">TV & Home</a>
+      <a href="index.html#">Entertainment</a>
+      <a href="index.html#">Accessories</a>
+      <a href="index.html#">Support</a>
+    </nav>
+  </header>
+
+  <div class="page-header">
+    <div class="find-title">Invoice Number</div>
+    <div class="search-row">
+      <div class="search-box">
+        <input type="search" placeholder="Enter invoice number here!" />
+      </div>
+      <a class='search-link' href='../server.html'>Check &gt;</a>
+    </div>
+  </div>
+
+  <section class="stores-wrap">
+    <h2 class="stores-title">Stores in United States</h2>
+    <div class="carousel">
+      <div class="cards" id="cards">
+        <article class="card">
+          <img class="hero" src="https://th.bing.com/th/id/OIP.C4EolL0XmFnJWxfWX-NbdwHaEJ?w=297&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3" alt="Apple Broadway Plaza" />
+          <div class="card-body">
+            <h3>Apple Broadway Plaza</h3>
+            <p>1200 S. Main Street<br>Walnut Creek, CA 94596</p>
+            <p class="hours">Opens at 10:00 a.m.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="hero" src="https://th.bing.com/th/id/OIP.cfoboB01ZTNHkJ5vHesCJwHaEJ?w=316&h=180&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3" alt="Apple Cherry Creek" />
+          <div class="card-body">
+            <h3>Apple Cherry Creek</h3>
+            <p>3000 E 1st Avenue<br>Denver, CO 80206</p>
+            <p class="hours">Opens at 10:00 a.m.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img class="hero" src="https://th.bing.com/th/id/OIP.3LkyQuMHMNn45AHvLf3waQAAAA?w=237&h=184&c=7&r=0&o=7&cb=12&dpr=1.3&pid=1.7&rm=3" alt="Apple Chandler Fashion Center" />
+          <div class="card-body">
+            <h3>Apple Chandler Fashion Center</h3>
+            <p>3111 W Chandler Boulevard<br>Chandler, AZ 85226</p>
+            <p class="hours">Opens at 10:00 a.m.</p>
+          </div>
+        </article>
+      </div>
+      <button class="arrow-right" id="arrowRight">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M9 6l6 6-6 6" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <section class="promo">
+    <h2>Come see the best of Apple at our stores.</h2>
+    <p>Shop our products and get expert advice in person.</p>
+  </section>
+  <img src="img/apple%204.png" width="100%"> <br>
+  <img src="img/apple%205.png" width="100%"> <br>
+  <img src="img/1.png" width="100%"> <br>
+  <img src="img/2.png" width="100%"> <br>
+  <img src="img/3.png" width="100%"> <br>
+  <img src="img/4.png" width="100%"> <br>
+  <img src="img/5.png" width="100%"> 
+
+  <script>
+    const btn = document.getElementById('arrowRight');
+    const cards = document.getElementById('cards');
+    if (btn && cards) {
+      btn.addEventListener('click', () => {
+        const card = cards.querySelector('.card');
+        if (!card) return;
+        const gap = 28;
+        const scrollAmt = card.offsetWidth + gap;
+        cards.scrollBy({ left: scrollAmt, behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+</html>

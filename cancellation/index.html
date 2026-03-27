@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Refund Flow Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <img src="https://tse2.mm.bing.net/th/id/OIP.rqTSU3N6-1-hKh6dRShv5AHaKb?pid=Api&P=0&h=220" 
+       alt="Logo" class="page-logo" />
+  <main class="app">
+    <!-- 1) Enter Cancellation ID -->
+    <section id="enter-id" class="panel visible">
+      <div class="card">
+        <h1>Enter Cancellation ID</h1>
+        <p class="muted">Provide your cancellation ID to start the refund process.</p>
+
+        <form id="id-form" class="form">
+          <label for="cancelId">Cancellation ID</label>
+          <input id="cancelId" name="cancelId" type="text" placeholder="e.g. CXL-12345" required />
+          <div class="button-row">
+            <button type="submit" class="btn primary">Continue</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 2) Loading Screen -->
+    <section id="loading" class="panel">
+      <div class="loading-container">
+        <div class="spinner" aria-hidden="true"></div>
+        <div class="loading-content">
+          <h2>Processing...</h2>
+          <div id="message-rotator" class="message-rotator" aria-live="polite"></div>
+          <p class="muted small">Please do not refresh your browser.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3) Refund Form -->
+    <section id="refund-form" class="panel">
+      <div class="card">
+        <h1>Refund Form</h1>
+        <p class="muted">Fill in the details below to request your refund.</p>
+
+        <form id="form-refund" class="form">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+          <label for="reason">Reason for cancellation</label>
+          <select id="reason" name="reason" required>
+            <option value="" disabled selected>Select a reason</option>
+            <option>Found better price</option>
+            <option>Change of plans</option>
+            <option>Service issue</option>
+            <option>Other</option>
+          </select>
+
+          <label for="paymentMethod">Refund Method</label>
+          <select id="paymentMethod" name="paymentMethod" required>
+            <option value="" disabled selected>Select refund method</option>
+            <option value="online">Online Bank Transfer</option>
+            <option value="cheque">Cheque</option>
+          </select>
+
+          <div id="extra-fields"></div>
+
+          <div class="button-row">
+            <button type="submit" class="btn primary">Submit Refund Request</button>
+            <button type="button" id="back-to-id" class="btn">Back</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 4) Refund Token Page -->
+    <section id="token-page" class="panel">
+      <div class="card token-card">
+        <h1>Refund Token</h1>
+        <p class="muted">Save this token — it identifies your refund request.</p><br>
+        <h2>NOTE: When requested by our Billing Manager, please log in to your online banking to authorize the refund
+          transfer. For your security, never disclose banking details over the phone.</h2>
+
+        <div id="token-block" class="token-block">
+          <div class="token-row">
+            <strong>Token:</strong>
+            <span id="token-value" class="token-value"></span>
+          </div>
+
+          <div class="details">
+            <div class="detail-row"><strong>Name:</strong> <span id="d-name"></span></div>
+            <div class="detail-row"><strong>Email:</strong> <span id="d-email"></span></div>
+            <div class="detail-row"><strong>Reason:</strong> <span id="d-reason"></span></div>
+            <div class="detail-row"><strong>Payment:</strong> <span id="d-payment"></span></div>
+            <div class="detail-row"><strong>Cancellation ID:</strong> <span id="d-cancelid"></span></div>
+          </div>
+        </div>
+
+        <!-- Billing Agent Countdown Section -->
+        <div id="agent-section" class="agent-section">
+          <p id="agent-countdown" class="muted"></p>
+          <p id="agent-code" class="agent-code"></p>
+        </div>
+
+        <div class="button-row">
+          <button id="submit-again" class="btn primary">Submit Again (Generate New Token)</button>
+          <button id="edit-details" class="btn">Edit & Resubmit</button>
+          <button id="start-over" class="btn">Start Over</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

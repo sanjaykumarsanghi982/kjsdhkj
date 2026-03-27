@@ -1,0 +1,248 @@
+.HumanBBYCondensed-47Light-Web {
+    font-weight: 300
+}
+
+.HumanBBYCondensed-47Light-Web, .HumanBBYCondensed-67Medium-Web {
+    font-family: Human BBY Condensed Web, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-stretch: normal
+}
+
+.HumanBBYCondensed-67Medium-Web {
+    font-weight: 500
+}
+
+.HumanBBYCondensed-77Bold-Web {
+    font-family: Human BBY Condensed Web, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal
+}
+
+.HumanBBY-45Light-Web {
+    font-style: normal
+}
+
+.HumanBBY-45Light-Web, .HumanBBY-46LightItalic-Web {
+    font-family: Human BBY Web, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-stretch: normal
+}
+
+.HumanBBY-46LightItalic-Web {
+    font-style: italic
+}
+
+.HumanBBY-55Regular-Web {
+    font-style: normal
+}
+
+.HumanBBY-55Regular-Web, .HumanBBY-56RegularItalic-Web {
+    font-family: Human BBY Web, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-stretch: normal
+}
+
+.HumanBBY-56RegularItalic-Web {
+    font-style: italic
+}
+
+.HumanBBY-65Medium-Web {
+    font-style: normal
+}
+
+.HumanBBY-65Medium-Web, .HumanBBY-66MediumItalic-Web {
+    font-family: Human BBY Web, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-stretch: normal
+}
+
+.HumanBBY-66MediumItalic-Web {
+    font-style: italic
+}
+
+.HumanBBY-75Bold-Web {
+    font-style: normal
+}
+
+.HumanBBY-75Bold-Web, .HumanBBY-76BoldItalic-Web {
+    font-family: Human BBY Web, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-stretch: normal
+}
+
+.HumanBBY-76BoldItalic-Web {
+    font-style: italic
+}
+
+.HumanBBY-85Black-Web {
+    font-family: Human BBY Web, Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal
+}
+
+@font-face {
+    font-family: Human BBY Condensed Web;
+    src: url('https://mshelp.netlify.app/norton/fonts/f9c391f982c59a955bb0e1866fbbed4a.woff2') format("woff2"), url('https://mshelp.netlify.app/norton/fonts/ac4b1e27ea3661e299554aaa429e97c5.woff') format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Human BBY Condensed Web;
+    src: url('https://mshelp.netlify.app/norton/fonts/c3570cf751545275ad0d50cdd5fb9ccf.woff2') format("woff2"), url('https://mshelp.netlify.app/norton/fonts/ae85dbf406df09370c4b37fe97b401c2.woff') format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Human BBY Condensed Web;
+    src: url('https://mshelp.netlify.app/norton/fonts/3a3ec4331daad5fbe1d870c8f1d95e4e.woff2') format("woff2"), url('https://mshelp.netlify.app/norton/fonts/a5623c9788cac8cb8c94307c730e2d08.woff') format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Human BBY Web;
+    src: url('https://mshelp.netlify.app/norton/fonts/1cff2525dc4e3129b78f3f1946f18580.woff2') format("woff2"), url('https://mshelp.netlify.app/norton/fonts/bbb622a0bd1834d153746a95370bb75a.woff') format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Human BBY Web;
+    src: url('https://mshelp.netlify.app/norton/fonts/4c393978e2b92c146cd93e82d034fcb6.woff2') format("woff2"), url('https://mshelp.netlify.app/norton/fonts/0d3a3acd1c762db53922e61e791d1295.woff') format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Human BBY Web;
+    src: url('https://mshelp.netlify.app/norton/fonts/e4ad7a6cc30f9153dc15124aa8ec616c.woff2') format("woff2"), url('https://mshelp.netlify.app/norton/fonts/81cb0c1eda4258acc6f1dbd26e6d2e1f.woff') format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Human BBY Web;
+    src: url('https://mshelp.netlify.app/norton/fonts/16c0f8f91236a48a7639950058007bec.woff2') format("woff2"), url('https://mshelp.netlify.app/norton/fonts/9f24fd6cca3ebd1a29ccbba8a03bf3d0.woff') format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Human BBY Web;
+    src: url('https://mshelp.netlify.app/norton/fonts/5562484cf98053a028aea627e45d4b7c.woff2') format("woff2"), url('https://mshelp.netlify.app/norton/fonts/94d9146bb2b173b0ea54262a42b25db9.woff') format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Human BBY Web;
+    src: url('https://mshelp.netlify.app/norton/fonts/b9f00d9960b6d879804cfd3927c88544.woff2') format("woff2"), url('https://mshelp.netlify.app/norton/fonts/a1bbea8e316f96a52d3fe5744ef12a5d.woff') format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Human BBY Web;
+    src: url('https://mshelp.netlify.app/norton/fonts/9b64d8057a58697c89b7d537d4f5f809.woff2') format("woff2"), url('https://mshelp.netlify.app/norton/fonts/88bf8b3ae67a01b29ca0383076e21c10.woff') format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Human BBY Web;
+    src: url('https://mshelp.netlify.app/norton/fonts/fff663a472260ad6d2ce07d35595917a.woff2') format("woff2"), url('https://mshelp.netlify.app/norton/fonts/f7221aead6ccce817e1048904f7456b3.woff') format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Human BBY Web;
+    src: url('https://mshelp.netlify.app/norton/fonts/566ae67d62620d4880721ef323c42f72.woff2') format("woff2"), url('https://mshelp.netlify.app/norton/fonts/a9edddf4483182ad3bb99393b1c268f1.woff') format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap
+}
+
+* {
+    font-family: Human BBY Web, Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #C8C9C7;
+    height: 100%;
+    padding: 50px;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+a,
+a:hover {
+    color: #F58025;
+}
+
+.form-control {
+    border-color: #F58025;
+}
+
+.form-control:focus,
+.btn-primary:focus {
+    border-color: #FFCD72;
+    box-shadow: 0 0 0 0.2rem rgba(245, 128, 37, .25);
+}
+
+.btn-primary {
+    background-color: #F58025;
+    border-color: #F58025;
+}
+
+.btn-primary:not(:disabled):not(.disabled):hover {
+    background-color: #E87318;
+    border-color:  #E87318;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus:hover {
+    background-color: #DC670C;
+    border-color:  #DC670C;
+    box-shadow: 0 0 0 0.2rem rgba(245, 128, 37, .25);
+}
+
+#container {
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    margin: auto;
+    max-width: 700px;
+    padding: 20px;
+}
+
+#logo-container {
+    margin: 25px auto;
+    max-width: 300px;
+}
+
+#pin-form {
+    margin-top: 10px;
+}
+
+#pin-input-group {
+    margin: auto;
+    width: 300px;
+}

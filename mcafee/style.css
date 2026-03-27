@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    background-image: linear-gradient(135deg, #333 25%, #444 25%, #444 50%, #333 50%, #333 75%, #444 75%, #444 100%);
+    background-size: 40px 40px;
+    background-repeat: repeat;
+    color: #111;
+    min-height: 100vh;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    border-bottom: 3px solid #c00;
+  }
+  
+  .logo {
+    width: 160px;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .subtext {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .card label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .card .small {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  
+  .card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+  }
+  
+  .btn {
+    display: block;
+    text-align: center;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #b71c1c;
+  }
+  

@@ -1,0 +1,178 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 24px;
+}
+
+.nav-links a,
+.user-actions a {
+  margin: 0 12px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.user-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #dce9ff, #f2f6ff);
+  padding: 60px 32px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+  margin: 30px 30px;
+  text-align: left;
+  color: black;
+}
+
+.hero-text p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 30px 30px;
+  text-align: left;
+  color: black;
+}
+
+.hero-buttons button {
+  background-color: #0078d4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.hero-icons {
+  margin-top: 40px;
+}
+
+.app-icons span {
+  display: inline-block;
+  margin: 10px;
+  background-color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Plans Section */
+.plans {
+  padding: 60px 32px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.plans h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.plans p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.plan-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.plan-card {
+  width: 250px;
+  padding: 24px;
+  border-radius: 8px;
+  color: white;
+  text-align: left;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+
+.plan-card.home {
+  background-color: #d83b01;
+}
+
+.plan-card.business {
+  background-color: #0078d4;
+}
+
+.plan-card.enterprise {
+  background-color: #107c10;
+}
+.hero-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.app-icons {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.app-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.app-link:hover {
+  transform: translateY(-5px);
+  color: #0077cc;
+}
+
+.app-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+}
+.hero {
+  background-image: url("../doc/7.avif");
+  background-size: cover;       /* makes it cover entire section */
+  background-position: center;  /* centers the image */
+  background-repeat: no-repeat; /* no repeating */
+  color: white;                 /* optional: text more visible */
+  padding: 50px;                /* add spacing */
+}
